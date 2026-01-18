@@ -7,6 +7,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@v4
-      uses: docker/setup-buildx-action@v4
-      run: docker build -t nothing .
+      - name: copy source
+        uses: actions/checkout@v4
+
+      - name: setup docker
+        uses: docker/setup-buildx-action@v4
+        
+      - name: build image
+        run: docker build -t nothing .
