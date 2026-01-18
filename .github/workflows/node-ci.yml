@@ -7,19 +7,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -name: checkout code
-      uses: Actions/checkout@v4
+      - name: checkout code
+        uses: Actions/checkout@v4
 
-      -name: setup Nodejs
-      uses: actions/setup-node@v4
-      with:
-        node-version: 18
+      - name: setup Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-      -name: Install dependacies
-      run: npm install
+      - name: Install dependacies
+        run: npm install
 
-      -name: run app
-      run: node index.js
+      - name: run app
+        run: node index.js
 
-      -name: run test
-      run: node test.js
+      - name: run test
+        run: node test.js
