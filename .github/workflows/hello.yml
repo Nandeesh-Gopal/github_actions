@@ -14,4 +14,4 @@ jobs:
         run: echo "Hello from GitHub Actions 🚀"
       
       - name: print scret
-        run: echo "this is scret ${{API_KEY}}"
+        run: echo "this is scret ${{secrets.API_KEY}}"
