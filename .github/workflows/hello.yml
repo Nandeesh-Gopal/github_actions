@@ -12,3 +12,6 @@ jobs:
     steps:
       - name: Print Hello
         run: echo "Hello from GitHub Actions 🚀"
+      
+      - name: print scret
+        run: echo "this is scret ${{API_KEY}}"
